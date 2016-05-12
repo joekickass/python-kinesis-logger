@@ -62,7 +62,7 @@ class Worker(object):
         Stop the worker.
         """
         self._stop.set()
-        self.queue.put_noawait(self._sentinel)
+        self.queue.put_nowait(self._sentinel)
         self._thread.join()
         self._thread = None
 
