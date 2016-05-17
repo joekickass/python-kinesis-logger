@@ -5,6 +5,7 @@
 
 import boto3
 import threading
+import queue
 
 
 class Worker(object):
